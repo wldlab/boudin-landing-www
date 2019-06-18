@@ -1,0 +1,19 @@
+.main {
+  background-color: $color-main;
+  background-image: linear-gradient($color-second .1em, transparent .1em), linear-gradient(90deg, $color-second .1em, transparent .1em);
+  color: $color-white;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background-size: calc(100vw / 5 - 2px) calc(100vw / 5);
+}
+
+.roi {
+  padding: 20px 0 110px;
+  &__title {
+    font-size: 2em;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
