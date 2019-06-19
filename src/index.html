@@ -8,82 +8,202 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
-    <div class="main">
+    <div class="main" id="js-sausage-container">
+      <img src="/images/vector-boudon.svg" alt="" id="js-sausage-left" class="floating-sausage floating-sausage--left">
+
+      <img src="/images/vector-boudon.svg" alt="" id="js-sausage-right" class="floating-sausage floating-sausage--right">
+
       <section class="container roi">
-        <h1 class="roi__title">Le roi<br>du<br><span class="roi__title--hidden">boudin</span></h1>
-        <img src="/images/boudin.svg" alt="Le roi du boudin">
+        <h1 class="roi__title"  style="z-index: 5; position: relative;">Le roi<br>du<br><span class="roi__title--hidden">boudin</span></h1>
+
+        <img src="/images/boudin.svg" alt="Le roi du boudin" style="z-index: 3; position: relative;">
       </section>
+
       <section class="container roi">
         <h2 class="roi__title">du<br><span class="roi__title--hidden">saucisson</span></h2>
-        <img src="/images/saucisson.svg" alt="Le roi du saucisson">
+
+        <img src="/images/saucisson.svg" alt="Le roi du saucisson" style="z-index: 5; position: relative;">
       </section>
+
       <section class="container roi">
         <h2 class="roi__title">de la<br><span class="roi__title--hidden">quenelle</span></h2>
-        <img src="/images/quenelle.svg" alt="Le roi de la quenelle">
+
+        <img src="/images/quenelle.svg" alt="Le roi de la quenelle" style="z-index: 5; position: relative;">
       </section>
+
       <section class="container roi">
         <h2 class="roi__title">du<br><span class="roi__title--hidden">bacon</span></h2>
-        <img src="/images/bacon.svg" alt="Le roi du bacon">
+
+        <img src="/images/bacon.svg" alt="Le roi du bacon" style="z-index: 3; position: relative;">
       </section>
+
+      <section class="container roi">
+        <h2 class="roi__title">des<br><span class="roi__title--hidden">saucisses</span></h2>
+
+        <img src="/images/saucisses.svg" alt="Le roi du bacon" style="z-index: 3; position: relative;">
+      </section>
+
       <section class="container roi">
         <h2 class="roi__title">des<br><span class="roi__title--hidden">pâtés</span></h2>
-        <img src="/images/pates.svg" alt="Le roi des pâtés">
+
+        <img src="/images/pates.svg" alt="Le roi des pâtés" style="z-index: 1; position: relative;">
       </section>
+
       <section class="container roi">
         <h2 class="roi__title">des<br><span class="roi__title--hidden">charcuteries</span></h2>
-        <img src="/images/charcuteries.svg" alt="Le roi des charcuteries">
+
+        <img src="/images/charcuteries.svg" alt="Le roi des charcuteries" style="z-index: 5; position: relative;">
       </section>
     </div>
-    <footer class="footer">
+
+    <footer class="footer"  style="z-index: 6; position: relative;">
       <div class="container locations">
         <div class="location">
           <h3 class="location__title" class="location__title">Il est ici!</h3>
+
           <h4 class="location__place">Pied bleu, l'original</h4>
+
           <hr class="location__separator">
-          <p class="location__hours">Lundi et mardi de 10h00 à 17h00<br>
-          Mercredi au samedi 10h00 à 21h00<br>
-          Dimanche 10h00 à 14h00</p>
+
+          <p class="location__hours">
+            Lundi et mardi de 10h00 à 17h00<br>
+            Mercredi au samedi 10h00 à 21h00<br>
+            Dimanche 10h00 à 14h00
+          </p>
         </div>
+
         <div class="location">
           <h3 class="location__title" class="location__title">Là!</h3>
+
           <h4 class="location__place">Le grand marché</h4>
+
           <hr class="location__separator">
-          <p class="location__hours">À partir du 14 Juin<br>
-          Du lundi au vendredi de 9h00 à 18h00<br>
-          Samedi et dimanche de 9h00 à 17h00</p>
+
+          <p class="location__hours">
+            À partir du 14 Juin<br>
+            Du lundi au vendredi de 9h00 à 18h00<br>
+            Samedi et dimanche de 9h00 à 17h00
+          </p>
         </div>
+
         <div class="location">
           <h3 class="location__title">Icitte!</h3>
+
           <h4 class="location__place">Les galeries gourmandes</h4>
+
           <hr class="location__separator">
-          <p class="location__hours">En septembre<br>
-          De lundi à vendredi 10h00 à 21h00<br>
-          Samedi et dimanche de 10h00 à 17h00</p>
+
+          <p class="location__hours">
+            En septembre<br>
+            De lundi à vendredi 10h00 à 21h00<br>
+            Samedi et dimanche de 10h00 à 17h00
+          </p>
         </div>
+
         <div class="location">
           <h3 class="location__title">Par là-bas!</h3>
+
           <h4 class="location__place">Marché de Sainte-Foy</h4>
+
           <hr class="location__separator">
-          <p class="location__hours">Samedi et dimanche de 10h00 à 24h00<br>
-          Jeudi au lundi de 10h00 à 17h00</p>
+
+          <p class="location__hours">
+            Samedi et dimanche de 10h00 à 24h00<br>
+            Jeudi au lundi de 10h00 à 17h00
+          </p>
         </div>
-        <div class="location">
+
+        <!-- <div class="location">
           <h3 class="location__title">Ici aussi!</h3>
+
           <h4 class="location__place">Marché du Vieux-Port</h4>
+
           <hr class="location__separator">
-          <p class="location__hours">Jusqu'à mai 10h00 à 17h00 7 sur 7</p>
-        </div>
+
+          <p class="location__hours">
+            Jusqu'à mai 10h00 à 17h00 7 sur 7
+          </p>
+        </div> -->
       </div>
+
       <div class="container social-links">
         <ul>
           <li><a href="https://www.facebook.com/PiedBleu/" target="_blank">Facebook</a></li>
+
           <li><a href="https://www.instagram.com/explore/tags/lepiedbleu/" target="_blank">Instagram</a></li>
         </ul>
+
         <a href="mailto:lepatron@lepiedbleu.com">lepatron@lepiedbleu.com</a>
+
         <div class="">
           <img src="/images/logo__le-pied-bleu.svg" alt="Le pied bleu">
         </div>
       </div>
     </footer>
+
+    <script>
+      var sausageLeft = document.querySelector('#js-sausage-left')
+      var sausageRight = document.querySelector('#js-sausage-right')
+      var sausageContainer = document.querySelector('#js-sausage-container')
+      var lastKnowScroll = window.scrollY
+      var innerHeight = window.innerHeight
+      var documentHeight = sausageContainer.scrollHeight
+
+      var ticking = false
+
+      function animate(scroll) {
+        var delta = scroll / (documentHeight + innerHeight)
+
+        sausageLeft.style.transform = 'translateY('+ delta * 100 + '%) rotate(' + (315 + (100 * delta)) + 'deg)'
+        sausageRight.style.transform = 'translateY(' + delta * 100 + '%) rotate(-' + (235 + (175 * delta)) + 'deg)'
+      }
+
+      function onResize() {
+        innerHeight = window.innerHeight
+        documentHeight = sausageContainer.scrollHeight
+
+        animate(lastKnowScroll)
+      }
+
+      window.addEventListener('scroll', function (e) {
+        lastKnowScroll = window.scrollY
+
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            animate(lastKnowScroll);
+            ticking = false;
+          });
+        }
+
+        ticking = true;
+      });
+
+      window.addEventListener('resize', function(e) {
+          lastKnowScroll = window.scrollY
+
+        if(!ticking) {
+            window.requestAnimationFrame(function () {
+              onResize()
+
+              animate(lastKnowScroll);
+
+              ticking = false;
+            });
+          }
+
+        ticking = true;
+        });
+
+      window.requestAnimationFrame(function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            animate(lastKnowScroll);
+            ticking = false;
+          });
+        }
+
+        ticking = true;
+      })
+    </script>
   </body>
 </html>
