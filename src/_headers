@@ -1,4 +1,4 @@
-*
-  Link: </fonts/gt-pressura/gt-pressura-bold-webfont.woff2>; rel=preload; as=font/woff2; crossorigin
-  Link: </fonts/gt-pressura/gt-pressura-light-webfont.woff2>; rel=preload; as=font/woff2; crossorigin
-  Link: </css/main.css>; rel=preload; as=style
+/*
+  link: </fonts/gt-pressura/gt-pressura-bold-webfont.woff2>; rel=preload; as=font/woff2; crossorigin
+  link: </fonts/gt-pressura/gt-pressura-light-webfont.woff2>; rel=preload; as=font/woff2; crossorigin
+  link: </css/main.css>; rel=preload; as=style
