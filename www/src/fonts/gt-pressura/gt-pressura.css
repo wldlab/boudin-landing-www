@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'pressura';
+  src:
+    url('./gt-pressura-light-webfont.woff2') format('woff2'),
+    url('./gt-pressura-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pressura';
+  src:
+    url('./gt-pressura-bold-webfont.woff2') format('woff2'),
+    url('./gt-pressura-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
