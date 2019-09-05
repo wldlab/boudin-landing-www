@@ -49,23 +49,21 @@ const Footer = () => (
       </Location>
 
       <Location title="Là!" place="Le grand marché">
-        À partir du 14 Juin
-        <br />
         Du lundi au vendredi de 9h00 à 18h00
         <br />
         Samedi et dimanche de 9h00 à 17h00
       </Location>
 
       <Location title="Icitte!" place="Les galeries gourmandes">
-        En septembre
+        De lundi au mercredi de 10h00 à 18h00
         <br />
-        De lundi à vendredi 10h00 à 21h00
+        jeudi et vendredi de 10h00 à 21h00
         <br />
-        Samedi et dimanche de 10h00 à 17h00
+        Samedi et dimanche de 9h00 à 17h00
       </Location>
 
       <Location title="Par là-bas!" place="Marché de Sainte-Foy">
-        Jeudi au dimanche de 10h00 à 17h00
+        Vendredi et samedi de 10h00 à 17h00
       </Location>
     </div>
 
