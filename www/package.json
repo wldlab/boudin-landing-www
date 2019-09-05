@@ -11,6 +11,7 @@
     "@sanity/block-content-to-react": "^2.0.6",
     "babel-plugin-styled-components": "^1.10.2",
     "dotenv": "^8.0.0",
+    "emotion": "^10.0.17",
     "gatsby": "^2.10.5",
     "gatsby-cli": "^2.7.2",
     "gatsby-image": "^2.2.3",

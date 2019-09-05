@@ -1,8 +1,8 @@
 // vendors
-import { css } from "@emotion/core"
+import { css } from '@emotion/core';
 
 // style varaibles
-import { colors, fonts } from "../variables"
+import { colors, fonts } from '../variables';
 
 export default css`
   :root {
@@ -67,4 +67,4 @@ export default css`
     max-width: 1590px;
     margin: 0 auto;
   }
-`
+`;

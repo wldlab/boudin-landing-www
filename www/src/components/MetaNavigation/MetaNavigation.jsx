@@ -1,8 +1,8 @@
 // vendors
-import React from "react"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
-import colors from "../../styles/variables/colors"
+import React from 'react';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+import colors from '../../styles/variables/colors';
 
 const Item = styled.li`
   display: inline-block;
@@ -22,19 +22,19 @@ const Item = styled.li`
   &:last-child {
     margin-right: 0;
   }
-`
+`;
 
 const Link = styled.a`
   text-transform: uppercase;
   font-weight: 300;
-  color: ${props => (props.isActive ? colors.primary : colors.white)};
-`
+  color: ${(props) => (props.isActive ? colors.primary : colors.white)};
+`;
 
 const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-`
+`;
 
 const MetaNavigation = () => (
   <div
@@ -58,14 +58,14 @@ const MetaNavigation = () => (
     >
       <List>
         <Item>
-          <Link href="https://piedbleu.com/" style={{ transitionDelay: "0ms" }}>
+          <Link href="https://piedbleu.com/" style={{ transitionDelay: '0ms' }}>
             Le pied bleu
           </Link>
         </Item>
         <Item>
           <Link
             href="http://bouchonquebec.com/"
-            style={{ transitionDelay: "100ms" }}
+            style={{ transitionDelay: '100ms' }}
           >
             Le bouchon
           </Link>
@@ -73,7 +73,7 @@ const MetaNavigation = () => (
         <Item>
           <Link
             href="http://lerenardetlachouette.com/"
-            style={{ transitionDelay: "200ms" }}
+            style={{ transitionDelay: '200ms' }}
           >
             Le renard et la chouette
           </Link>
@@ -81,7 +81,7 @@ const MetaNavigation = () => (
         <Item>
           <Link
             href="http://leroiduboudin.com/"
-            style={{ transitionDelay: "300ms" }}
+            style={{ transitionDelay: '300ms' }}
             isActive
           >
             Le roi du boudin
@@ -90,7 +90,7 @@ const MetaNavigation = () => (
         <Item>
           <Link
             href="http://restomamaison.com/"
-            style={{ transitionDelay: "400ms" }}
+            style={{ transitionDelay: '400ms' }}
           >
             Ma maison
           </Link>
@@ -98,6 +98,6 @@ const MetaNavigation = () => (
       </List>
     </nav>
   </div>
-)
+);
 
-export default MetaNavigation
+export default MetaNavigation;

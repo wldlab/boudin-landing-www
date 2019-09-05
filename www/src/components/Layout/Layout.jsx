@@ -1,16 +1,16 @@
 // vendors
-import React from "react"
-import PropTypes from "prop-types"
-import { Global } from "@emotion/core"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Global } from '@emotion/core';
 
 // styles
-import "normalize.css"
-import "../../fonts/gt-pressura/gt-pressura.css"
-import globalStyle from "../../styles/global"
+import 'normalize.css';
+import '../../fonts/gt-pressura/gt-pressura.css';
+import globalStyle from '../../styles/global';
 
 // components
-import MetaNavigation from "./../MetaNavigation"
-import Footer from "../Footer"
+import MetaNavigation from '../MetaNavigation';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => (
   <>
@@ -22,10 +22,10 @@ const Layout = ({ children }) => (
 
     <Footer />
   </>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

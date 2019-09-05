@@ -1,14 +1,14 @@
 // vendors
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { css } from "@emotion/core"
-import { colors } from "../../styles/variables"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import { colors } from '../../styles/variables';
 
 // images
-import LogoPiedBleu from "../../images/logo__le-pied-bleu.svg"
+import LogoPiedBleu from '../../images/logo__le-pied-bleu.svg';
 
 // components
-import Location from "../Location"
+import Location from '../Location';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -35,9 +35,9 @@ const Footer = () => {
         }
       }
     }
-  `)
+  `);
 
-  const locations = (data.locations.edges || []).map(({ node }) => node)
+  const locations = (data.locations.edges || []).map(({ node }) => node);
 
   return (
     <footer
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,3 +1,3 @@
-import MetaNavigation from "./MetaNavigation"
+import MetaNavigation from './MetaNavigation';
 
-export default MetaNavigation
+export default MetaNavigation;

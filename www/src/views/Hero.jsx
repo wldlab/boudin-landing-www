@@ -1,19 +1,19 @@
 // vendors
-import React, { Component } from "react"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
-import VisuallyHidden from "@reach/visually-hidden"
+import React, { Component } from 'react';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
+import VisuallyHidden from '@reach/visually-hidden';
 
-import { colors } from "./../styles/variables"
+import { colors } from '../styles/variables';
 
-import VectorBoudin from "../images/vector-boudon.svg"
-import WordBoudin from "../images/boudin.svg"
-import WordSaucisson from "../images/saucisson.svg"
-import WordQuenelle from "../images/quenelle.svg"
-import WordBacon from "../images/bacon.svg"
-import WordSaucisses from "../images/saucisses.svg"
-import WordPates from "../images/pates.svg"
-import WordCharcuteries from "../images/charcuteries.svg"
+import VectorBoudin from '../images/vector-boudon.svg';
+import WordBoudin from '../images/boudin.svg';
+import WordSaucisson from '../images/saucisson.svg';
+import WordQuenelle from '../images/quenelle.svg';
+import WordBacon from '../images/bacon.svg';
+import WordSaucisses from '../images/saucisses.svg';
+import WordPates from '../images/pates.svg';
+import WordCharcuteries from '../images/charcuteries.svg';
 
 const FloatingSausage = styled.img`
   position: fixed;
@@ -24,7 +24,7 @@ const FloatingSausage = styled.img`
   @media (min-width: 769px) {
     width: ${(316 / 792) * 100}vw;
   }
-`
+`;
 
 const KingSection = styled.div`
   padding: 20px 0 110px;
@@ -34,34 +34,34 @@ const KingSection = styled.div`
     font-size: 2em;
     margin-bottom: 1em;
   }
-`
+`;
 
 class Hero extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { containerHeight: 0, innerHeight: 0, lastKnowScroll: 0 }
+    this.state = { containerHeight: 0, innerHeight: 0, lastKnowScroll: 0 };
 
-    this.myContainer = React.createRef()
+    this.myContainer = React.createRef();
 
-    this.handleScroll = this.handleScroll.bind(this)
-    this.handleResize = this.handleResize.bind(this)
+    this.handleScroll = this.handleScroll.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
-    window.addEventListener("resize", this.handleResize)
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
 
-    this.handleResize()
+    this.handleResize();
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
-    window.removeEventListener("resize", this.handleResize)
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleScroll() {
-    this.setState({ lastKnowScroll: window.scrollY })
+    this.setState({ lastKnowScroll: window.scrollY });
   }
 
   handleResize() {
@@ -69,12 +69,12 @@ class Hero extends Component {
       containerHeight: this.myContainer.current.scrollHeight,
       lastKnowScroll: window.scrollY,
       innerHeight: window.innerHeight,
-    })
+    });
   }
 
   render() {
-    const { containerHeight, innerHeight, lastKnowScroll } = this.state
-    const delta = lastKnowScroll / (containerHeight + innerHeight)
+    const { containerHeight, innerHeight, lastKnowScroll } = this.state;
+    const delta = lastKnowScroll / (containerHeight + innerHeight);
 
     return (
       <div
@@ -240,7 +240,7 @@ class Hero extends Component {
           />
         </KingSection>
       </div>
-    )
+    );
   }
 }
 
@@ -441,4 +441,4 @@ class Hero extends Component {
 //   )
 // }
 
-export default Hero
+export default Hero;

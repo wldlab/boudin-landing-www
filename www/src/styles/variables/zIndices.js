@@ -6,4 +6,4 @@ export default {
   modal: 1050,
   popover: 1060,
   tooltip: 1070,
-}
+};
