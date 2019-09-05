@@ -1,35 +1,39 @@
 export default {
-  type: 'object',
-  name: 'hour',
+  type: "object",
+  name: "hour",
   fields: [
     {
-      name: 'fromTime',
-      title: 'De',
-      type: 'timeObject'
+      name: "fromTime",
+      title: "De",
+      type: "timeObject",
+      validation: Rule => Rule.required(),
     },
     {
-      name: 'toTime',
-      title: 'À',
-      type: 'timeObject'
+      name: "toTime",
+      title: "À",
+      type: "timeObject",
+      validation: Rule => Rule.required(),
     },
     {
-      name: 'note',
-      title: 'Note',
-      type: 'string'
-    }
+      name: "note",
+      title: "Note",
+      type: "string",
+    },
   ],
   preview: {
     select: {
-      fromTime: 'fromTime',
-      toTime: 'toTime',
-      note: 'note'
+      fromTime: "fromTime",
+      toTime: "toTime",
+      note: "note",
     },
-    prepare (selection) {
-      const {fromTime, toTime, note} = selection
+    prepare(selection) {
+      const { fromTime, toTime, note } = selection
       return {
-        title: `${fromTime.hour}h${fromTime.minute || ''} à ${toTime.hour}h${toTime.minute || ''}`,
-        subtitle: note
+        title: `${fromTime.hour}h${fromTime.minute || ""} à ${
+          toTime.hour
+        }h${toTime.minute || ""}`,
+        subtitle: note,
       }
-    }
-  }
+    },
+  },
 }

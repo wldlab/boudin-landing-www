@@ -1,5 +1,5 @@
 {
-  "extends": ["react-app", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "airbnb/hooks", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
   "plugins": ["jsx-a11y", "emotion"],
   "rules": {}
 }

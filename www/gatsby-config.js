@@ -40,6 +40,7 @@ module.exports = {
         dataset: process.env.SANITY_DATASET,
         token: process.env.SANITY_DEPLOY_STUDIO_TOKEN,
         overlayDrafts: true,
+        watchMode: true,
       },
     },
     "gatsby-transformer-sharp",

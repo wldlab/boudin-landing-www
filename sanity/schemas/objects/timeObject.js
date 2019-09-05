@@ -1,38 +1,46 @@
+import normalizeNumber from "../../../utils/normalizeNumber"
+
 const arrayListNumberItem = (total, step = 1) => {
-  return Array(total / step).fill().map((val, index) => ({title: `${index * step}`, value: `${index * step}`}))
+  return Array(total / step)
+    .fill()
+    .map((val, index) => ({
+      title: `${normalizeNumber(index * step)}`,
+      value: `${index * step}`,
+    }))
 }
 
 export default {
-  type: 'object',
-  name: 'timeObject',
+  type: "object",
+  name: "timeObject",
   fields: [
     {
-      name: 'hour',
-      title: 'Heure',
-      type: 'string',
+      name: "hour",
+      title: "Heure",
+      type: "string",
+      validation: Rule => Rule.required(),
       options: {
-        list: arrayListNumberItem(24)
-      }
+        list: arrayListNumberItem(24),
+      },
     },
     {
-      name: 'minute',
-      title: 'Minute',
-      type: 'string',
+      name: "minute",
+      title: "Minute",
+      type: "string",
       options: {
-        list: arrayListNumberItem(60, 15)
-      }
-    }
+        list: arrayListNumberItem(60, 15),
+      },
+    },
   ],
   preview: {
     select: {
-      hour: 'hour',
-      minute: 'minute'
+      hour: "hour",
+      minute: "minute",
     },
-    prepare (selection) {
-      const {hour, minute} = selection
+    prepare(selection) {
+      const { hour, minute } = selection
       return {
-        title: `${hour}h${minute || ''}`
+        title: `${hour}h${minute || ""}`,
       }
-    }
-  }
+    },
+  },
 }
