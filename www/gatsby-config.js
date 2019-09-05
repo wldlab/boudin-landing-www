@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   siteMetadata: {
     title: 'Le roi du boudin',
@@ -39,8 +41,8 @@ module.exports = {
         projectId: process.env.SANITY_PROJECT_ID,
         dataset: process.env.SANITY_DATASET,
         token: process.env.SANITY_DEPLOY_STUDIO_TOKEN,
-        overlayDrafts: true,
-        watchMode: true,
+        overlayDrafts: !isProd,
+        watchMode: !isProd,
       },
     },
     'gatsby-transformer-sharp',
