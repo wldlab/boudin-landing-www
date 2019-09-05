@@ -1,0 +1,43 @@
+{
+  "name": "boudin-landing-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "develop": "lerna run develop --parallel",
+    "format": "lerna run format",
+    "build-studio": "(cd studio && npm run build)",
+    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "lerna run lint",
+    "postinstall": "lerna bootstrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wldlab/boudin-landing-www.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wldlab/boudin-landing-www/issues"
+  },
+  "homepage": "https://github.com/wldlab/boudin-landing-www#readme",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "git add"
+    ]
+  }
+}

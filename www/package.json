@@ -60,11 +60,9 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "1.6.1",
-    "husky": ">=2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-emotion": "^10.0.14",
-    "lint-staged": ">=8",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
     "stylelint": "^10.1.0",
@@ -93,18 +91,6 @@
     "start": "npm run develop",
     "storybook": "start-storybook -s ./static -p 6006",
     "test": "jest --watch"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run format:code",
-      "npm run format:style",
-      "git add"
-    ]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/setup-test-env.js"
