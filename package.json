@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/wldlab/boudin-landing-www#readme",
   "devDependencies": {
+    "@sanity/cli": "^0.142.2",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.0.0",
