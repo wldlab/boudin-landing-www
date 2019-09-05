@@ -9,12 +9,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-emotion",
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "UA-39075416-1",
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
@@ -33,15 +33,15 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-    // {
-    //   resolve: "gatsby-source-sanity",
-    //   options: {
-    //     projectId: process.env.SANITY_PROJECT_ID,
-    //     dataset: process.env.SANITY_DATASET,
-    //     token: process.env.SANITY_DEPLOY_STUDIO_TOKEN,
-    //     overlayDrafts: false,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        token: process.env.SANITY_DEPLOY_STUDIO_TOKEN,
+        overlayDrafts: true,
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-transformer-yaml",
   ],
