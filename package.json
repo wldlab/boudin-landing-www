@@ -7,8 +7,8 @@
     "build": "lerna run build --parallel",
     "develop": "lerna run develop --parallel",
     "format": "lerna run format",
-    "build-studio": "(cd studio && npm run build)",
-    "build-web": "lerna bootstrap && (cd studio && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd web && npm run build)",
+    "build-studio": "(cd sanity && npm run build)",
+    "build-web": "lerna bootstrap && (cd sanity && SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN npm run graphql-deploy) && (cd www && npm run build)",
     "graphql-deploy": "lerna run graphql-deploy",
     "lint": "lerna run lint",
     "postinstall": "lerna bootstrap",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/wldlab/boudin-landing-www#readme",
   "devDependencies": {
+    "@sanity/cli": "^0.142.2",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.0.0",
