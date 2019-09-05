@@ -8,7 +8,7 @@ import { colors } from '../../styles/variables';
 import dayToConditionalString from '../../../../utils/dayToConditionalString';
 import normalizeNumber from '../../../../utils/normalizeNumber';
 
-const titleList = ['Il est ici!', 'Là!', 'Icitte!', 'Par là-bas!'];
+const titleList = ['Il est ici!', 'Là!', 'Icitte!', 'Par là-bas!', 'Ici aussi!'];
 
 const Location = ({ place, index, openningHour }) => (
   <div
