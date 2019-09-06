@@ -8,7 +8,7 @@ import { colors } from '../styles/variables';
 const Menu = () => {
   const data = useStaticQuery(graphql`
     query Menu {
-      products: allSanityProduct(sort: {fields: category___sort, order: ASC}) {
+      products: allSanityProduct(sort: {fields: sortOrder, order: ASC}) {
         group(field: category___name) {
           category: fieldValue
           edges {
