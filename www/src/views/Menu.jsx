@@ -8,7 +8,7 @@ import { colors } from '../styles/variables';
 const Menu = () => {
   const data = useStaticQuery(graphql`
     query Menu {
-      products: allSanityProduct {
+      products: allSanityProduct(sort: {fields: category___sort, order: ASC}) {
         group(field: category___name) {
           category: fieldValue
           edges {
@@ -18,10 +18,24 @@ const Menu = () => {
           }
         }
       }
+      category: allSanityCategory(sort: {fields: sort, order: ASC}) {
+        edges {
+          node {
+            name
+          }
+        }
+      }
     }
   `);
 
-  const products = (data.products.group || []);
+  const sortOrder = (data.category.edges || []).map(({ node: { name } }) => name.toUpperCase());
+
+  const products = (data.products.group || []).sort((a, b) => {
+    const nameAIndex = sortOrder.indexOf(a.category.toUpperCase()); // ignore upper and lowercase
+    const nameBIndex = sortOrder.indexOf(b.category.toUpperCase()); // ignore upper and lowercase
+
+    return nameAIndex - nameBIndex;
+  });
 
   return (
     <section
@@ -33,14 +47,15 @@ const Menu = () => {
         color: ${colors.secondary};
         font-size: ${24 / 16}em;
         font-weight: bold;
+        background-color: ${colors.primary};
       `}
-      className="container"
     >
       <VisuallyHidden>
         <h2>Produits</h2>
       </VisuallyHidden>
 
       <div
+        className="container"
         css={css`
         columns: 1;
         column-gap: 20px;
@@ -73,7 +88,11 @@ const Menu = () => {
               {product.category}
 
             </h3>
-            <ul>
+            <ul
+              css={css`
+                margin-bottom: 1em;
+              `}
+            >
               {product.edges.map(({ node }) => <li>{node.name}</li>)}
             </ul>
           </div>
