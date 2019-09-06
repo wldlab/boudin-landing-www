@@ -6,15 +6,20 @@ export default {
     {
       name: 'name',
       title: 'Nom',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name'
-      }
-    }
-  ]
-}
+        source: 'name',
+      },
+    },
+    {
+      name: 'sort',
+      title: 'Ordre',
+      type: 'number',
+    },
+  ],
+};
