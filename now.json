@@ -2,20 +2,12 @@
   "name": "Le-roi-du-boudin",
   "version": 2,
   "builds": [{
-      "src": "www/package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    },
-    {
-      "src": "sanity/package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+    "src": "www/package.json",
+    "use": "@now/static-build",
+    "config": {
+      "distDir": "public"
     }
-  ],
+  }],
   "build": {
     "env": {
       "SANITY_PROJECT_ID": "xiif6aca",
