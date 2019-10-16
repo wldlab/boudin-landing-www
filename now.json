@@ -1,5 +1,6 @@
 {
   "name": "Le-roi-du-boudin",
+  "version": 2,
   "builds": [{
       "src": "www/package.json",
       "use": "@now/static-build",
@@ -14,5 +15,11 @@
         "distDir": "dist"
       }
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "SANITY_PROJECT_ID": "xiif6aca",
+      "SANITY_DATASET": "production"
+    }
+  }
 }
