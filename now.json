@@ -2,16 +2,39 @@
   "name": "Le-roi-du-boudin",
   "version": 2,
   "builds": [{
-    "src": "www/package.json",
-    "use": "@now/static-build",
-    "config": {
-      "distDir": "public"
+      "src": "www/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    },
+    {
+      "src": "sanity/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
-  }],
+  ],
   "build": {
     "env": {
       "SANITY_PROJECT_ID": "xiif6aca",
       "SANITY_DATASET": "production"
     }
-  }
+  },
+  "routes": [{
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/sanity/index.html"
+    }
+  ]
 }

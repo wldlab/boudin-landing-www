@@ -10,6 +10,7 @@
     "develop": "sanity start",
     "format:": "eslint --fix --ignore-path ./.gitignore --ignore-path ./.prettierignore --ext .js .",
     "build": "sanity build",
+    "now-build": "sanity build public -y",
     "graphql-deploy": "sanity graphql deploy --playground",
     "lint": "eslint .",
     "test": "sanity check"
