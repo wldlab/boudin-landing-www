@@ -33,7 +33,7 @@
       }
     },
     {
-      "src": "/admin/(.*)",
+      "src": "/admin/.*",
       "dest": "/sanity/index.html"
     }
   ]
