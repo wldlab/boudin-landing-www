@@ -1,6 +1,6 @@
 {
   "name": "Le-roi-du-boudin",
-  "build": [{
+  "builds": [{
       "src": "www/package.json",
       "use": "@now/static-build",
       "config": {
