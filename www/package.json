@@ -62,6 +62,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
+    "now-build": "npm run build",
     "build-storybook": "build-storybook",
     "develop": "gatsby develop",
     "format": "npm run format:code && npm run format:style",
