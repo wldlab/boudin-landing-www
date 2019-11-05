@@ -1,0 +1,31 @@
+{
+  "name": "Le-roi-du-boudin",
+  "scope": "wldlab",
+  "version": 2,
+  "builds": [{
+    "src": "www/package.json",
+    "use": "@now/static-build",
+    "config": {
+      "distDir": "public"
+    }
+  }],
+  "build": {
+    "env": {
+      "GA_TRACKING_ID": "UA-147180479-1",
+      "SANITY_PROJECT_ID": "xiif6aca",
+      "SANITY_DATASET": "production"
+    }
+  },
+  "routes": [{
+      "src": "/(.*)",
+      "dest": "/www/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    },
+    {
+      "src": "/admin/.*",
+      "dest": "https://le-roi-du-boudin.sanity.studio/"
+    }
+  ]
+}

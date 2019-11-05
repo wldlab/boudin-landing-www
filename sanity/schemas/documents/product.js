@@ -6,21 +6,26 @@ export default {
     {
       name: 'name',
       title: 'Nom',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'category',
       title: 'Categorie',
       type: 'reference',
-      to: [{type: 'category'}]
+      to: [{ type: 'category' }],
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name'
-      }
-    }
-  ]
-}
+        source: 'name',
+      },
+    },
+    {
+      name: 'sortOrder',
+      title: 'Ordre',
+      type: 'number',
+    },
+  ],
+};

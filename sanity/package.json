@@ -10,6 +10,7 @@
     "develop": "sanity start",
     "format:": "eslint --fix --ignore-path ./.gitignore --ignore-path ./.prettierignore --ext .js .",
     "build": "sanity build",
+    "now-build": "sanity build public -y",
     "graphql-deploy": "sanity graphql deploy --playground",
     "lint": "eslint .",
     "test": "sanity check"
@@ -18,19 +19,20 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^0.142.2",
-    "@sanity/components": "^0.142.4",
-    "@sanity/core": "^0.142.4",
-    "@sanity/dashboard": "^0.142.2",
-    "@sanity/default-layout": "^0.142.4",
-    "@sanity/default-login": "^0.142.3",
-    "@sanity/desk-tool": "^0.142.4",
+    "@sanity/base": "^0.144.1",
+    "@sanity/components": "^0.144.2",
+    "@sanity/core": "^0.144.0",
+    "@sanity/dashboard": "^0.144.1",
+    "@sanity/default-layout": "^0.144.2",
+    "@sanity/default-login": "^0.144.0",
+    "@sanity/desk-tool": "^0.144.2",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   },
   "devDependencies": {
+    "@sanity/cli": "^0.144.0",
     "babel-eslint": "^10.0.1",
     "prettier-eslint": "^9.0.0"
   },
