@@ -5,12 +5,18 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Hero from '../views/Hero';
+import Locations from '../views/Locations';
+import Menu from '../views/Menu';
 
 const IndexPage = () => (
   <Layout>
     <SEO />
 
     <Hero />
+
+    <Locations />
+
+    <Menu />
   </Layout>
 );
 
