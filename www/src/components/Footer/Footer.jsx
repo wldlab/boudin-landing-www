@@ -62,7 +62,7 @@ const Footer = () => (
         </li>
       </ul>
 
-      <a href="mailto:lepatron@lepiedbleu.com">lepatron@lepiedbleu.com</a>
+      <a href="mailto:lepatron@piedbleu.com">lepatron@piedbleu.com</a>
 
       <div className="">
         <img src={LogoPiedBleu} alt="Le pied bleu" />
