@@ -12,5 +12,11 @@
   "eslint.autoFixOnSave": true,
   // "prettier.eslintIntegration": false,
   // "prettier.stylelintIntegration": false,
-  "prettier.disableLanguages": ["javascript", "javascriptreact"],
+  "prettier.disableLanguages": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
