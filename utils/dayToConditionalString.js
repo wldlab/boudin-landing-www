@@ -1,4 +1,4 @@
-import dayToString from "./dayToString"
+import dayToString from './dayToString';
 
 // const groupSequences = array =>
 //   array.reduce((acc, cur, idx, src) => {
@@ -18,25 +18,27 @@ import dayToString from "./dayToString"
 //     return acc
 //   }, [])
 
-const isSequencial = array =>
-  array.every(
-    (num, index, src) => index === src.length - 1 || num < src[index + 1]
-  )
+const isSequencial = (array) => [...array]
+  .map((num) => (num === 0 ? 7 : num))
+  .sort((a, b) => a - b)
+  .every((num, index, src) => index === src.length - 1 || num < src[index + 1]);
 
-const dayToConditionalString = array => {
+const dayToConditionalString = (array) => {
   if (array.length === 1) {
-    return dayToString(array[0])
+    return dayToString(array[0]);
   }
 
   if (array.length === 2) {
-    return array.map(day => dayToString(day)).join(" et ")
+    return array.map((day) => dayToString(day)).join(' et ');
   }
 
   if (isSequencial(array)) {
     return [array.slice(0, 1)[0], array.slice(-1)[0]]
-      .map(day => dayToString(day))
-      .join(" au ")
+      .map((day) => dayToString(day))
+      .join(' au ');
   }
-}
 
-export default dayToConditionalString
+  return array.join(', ');
+};
+
+export default dayToConditionalString;
